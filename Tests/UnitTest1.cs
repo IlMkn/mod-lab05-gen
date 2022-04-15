@@ -30,8 +30,8 @@ namespace Tests
             Random r = new Random();
             Bigrams test = new Bigrams(r);
             string res1 = test.GetText(1000);
-            int count1 = Regex.Matches(res1, "îâ").Count;
-            int count2 = Regex.Matches(res1, "èà").Count;
+            int count1 = Regex.Matches(res1, "Ð¾Ð²").Count;
+            int count2 = Regex.Matches(res1, "Ð¸Ð°").Count;
             Assert.IsTrue(count1 > count2);
         }
         [TestMethod]
@@ -40,8 +40,8 @@ namespace Tests
             Random r = new Random();
             Bigrams test = new Bigrams(r);
             string res1 = test.GetText(1000);
-            int count1 = Regex.Matches(res1, "òî").Count;
-            int count2 = Regex.Matches(res1, "ñí").Count;
+            int count1 = Regex.Matches(res1, "Ñ‚Ð¾").Count;
+            int count2 = Regex.Matches(res1, "ÑÐ½").Count;
             Assert.IsTrue(count1 > count2);
         }
         [TestMethod]
@@ -50,7 +50,7 @@ namespace Tests
             Random r = new Random();
             Bigrams test = new Bigrams(r);
             string res1 = test.GetText(1000);
-            int count = Regex.Matches(res1, "øá").Count;
+            int count = Regex.Matches(res1, "ÑˆÐ±").Count;
             Assert.IsTrue(count == 0);
         }
 
@@ -60,8 +60,8 @@ namespace Tests
             Random r = new Random();
             Words test = new Words(r);
             string res1 = test.GetText(1000);
-            int count1 = Regex.Matches(res1, "è").Count;
-            int count2 = Regex.Matches(res1, "íèõ").Count;
+            int count1 = Regex.Matches(res1, "Ð¸").Count;
+            int count2 = Regex.Matches(res1, "Ð½Ð¸Ñ…").Count;
             Assert.IsTrue(count1 > count2);
         }
 
@@ -71,8 +71,8 @@ namespace Tests
             Random r = new Random();
             Words test = new Words(r);
             string res1 = test.GetText(1000);
-            int count1 = Regex.Matches(res1, "çà").Count;
-            int count2 = Regex.Matches(res1, "òàì").Count;
+            int count1 = Regex.Matches(res1, "Ð·Ð°").Count;
+            int count2 = Regex.Matches(res1, "Ñ‚Ð°Ð¼").Count;
             Assert.IsTrue(count1 > count2);
         }
         [TestMethod]
@@ -81,8 +81,8 @@ namespace Tests
             Random r = new Random();
             WordPairs test = new WordPairs(r);
             string res1 = test.GetText(1000);
-            int count1 = Regex.Matches(res1, "ïîòîìó ÷òî").Count;
-            int count2 = Regex.Matches(res1, "â êîíöå").Count;
+            int count1 = Regex.Matches(res1, "Ð¿Ð¾Ñ‚Ð¾Ð¼Ñƒ Ñ‡Ñ‚Ð¾").Count;
+            int count2 = Regex.Matches(res1, "Ð² ÐºÐ¾Ð½Ñ†Ðµ").Count;
             Assert.IsTrue(count1 > count2);
         }
 
@@ -92,8 +92,8 @@ namespace Tests
             Random r = new Random();
             WordPairs test = new WordPairs(r);
             string res1 = test.GetText(1000);
-            int count1 = Regex.Matches(res1, "è íå").Count;
-            int count2 = Regex.Matches(res1, "òàêèì îáðàçîì").Count;
+            int count1 = Regex.Matches(res1, "Ð¸ Ð½Ðµ").Count;
+            int count2 = Regex.Matches(res1, "Ñ‚Ð°ÐºÐ¸Ð¼ Ð¾Ð±Ñ€Ð°Ð·Ð¾Ð¼").Count;
             Assert.IsTrue(count1 > count2);
         }
         [TestMethod]
