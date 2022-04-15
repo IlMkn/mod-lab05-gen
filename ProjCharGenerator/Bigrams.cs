@@ -18,7 +18,7 @@ namespace ProjCharGenerator
             pairFr = new int[alp.Length, alp.Length];
             this.r = r;
             frSum = 0;
-            string[] rows = File.ReadAllLines(@"Sources\Bigrams.txt");
+            string[] rows = File.ReadAllLines(@"Sources/Bigrams.txt");
             for (int i = 0; i < alp.Length; i++)
             {
                 var values = Regex.Matches(rows[i], @"\d+").Select(m => int.Parse(m.Value)).ToArray();

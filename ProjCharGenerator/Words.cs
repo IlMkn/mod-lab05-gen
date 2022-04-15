@@ -16,7 +16,7 @@ namespace ProjCharGenerator
             frSum = 0;
             this.r = r;
             WordF = new Dictionary<string, int>();
-            string[] rows = File.ReadAllLines(@"Sources\WordsFreq.txt");
+            string[] rows = File.ReadAllLines(@"Sources/WordsFreq.txt");
 
             for (int i = 0; i < rows.Length; i++)
             {

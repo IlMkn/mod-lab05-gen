@@ -12,17 +12,17 @@ namespace Tests
         [TestMethod]
         public void TestMethod1()
         {
-            Assert.IsTrue(File.Exists(@"Sources\Bigrams.txt"));
+            Assert.IsTrue(File.Exists(@"Sources/Bigrams.txt"));
         }
         [TestMethod]
         public void TestMethod2()
         {
-            Assert.IsTrue(File.Exists(@"Sources\WordsFreq.txt"));
+            Assert.IsTrue(File.Exists(@"Sources/WordsFreq.txt"));
         }
         [TestMethod]
         public void TestMethod3()
         {
-            Assert.IsTrue(File.Exists(@"Sources\Pairs.txt"));
+            Assert.IsTrue(File.Exists(@"Sources/Pairs.txt"));
         }
         [TestMethod]
         public void TestMethod4()
@@ -102,8 +102,8 @@ namespace Tests
             Random r = new Random();
             Bigrams test = new Bigrams(r);
             string res1 = test.GetText(1000);
-            test.WriteToFile(@"Output\BigramsOutput.txt", res1);
-            Assert.IsTrue(File.Exists(@"Output\BigramsOutput.txt"));
+            test.WriteToFile(@"Output/BigramsOutput.txt", res1);
+            Assert.IsTrue(File.Exists(@"Output/BigramsOutput.txt"));
         }
         [TestMethod]
         public void TestMethod12()
@@ -111,8 +111,8 @@ namespace Tests
             Random r = new Random();
             Words test = new Words(r);
             string res1 = test.GetText(1000);
-            test.WriteToFile(@"Output\WordGen.txt", res1);
-            Assert.IsTrue(File.Exists(@"Output\WordGen.txt"));
+            test.WriteToFile(@"Output/WordGen.txt", res1);
+            Assert.IsTrue(File.Exists(@"Output/WordGen.txt"));
         }
 
         [TestMethod]
@@ -121,8 +121,8 @@ namespace Tests
             Random r = new Random();
             WordPairs test = new WordPairs(r);
             string res1 = test.GetText(1000);
-            test.WriteToFile(@"Output\PairsGen.txt", res1);
-            Assert.IsTrue(File.Exists(@"Output\PairsGen.txt"));
+            test.WriteToFile(@"Output/PairsGen.txt", res1);
+            Assert.IsTrue(File.Exists(@"Output/PairsGen.txt"));
         }
     }
 }
